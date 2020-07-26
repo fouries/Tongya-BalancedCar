@@ -3,7 +3,7 @@
 ..\obj\mpu6050.o: ..\SYSTEM\sys\sys.h
 ..\obj\mpu6050.o: ..\USER\stm32f4xx.h
 ..\obj\mpu6050.o: ..\CORE\core_cm4.h
-..\obj\mpu6050.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\mpu6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\mpu6050.o: ..\CORE\core_cmInstr.h
 ..\obj\mpu6050.o: ..\CORE\core_cmFunc.h
 ..\obj\mpu6050.o: ..\CORE\core_cm4_simd.h
@@ -40,7 +40,7 @@
 ..\obj\mpu6050.o: ..\SYSTEM\delay\delay.h
 ..\obj\mpu6050.o: ..\SYSTEM\sys\sys.h
 ..\obj\mpu6050.o: ..\USER\dac.h
-..\obj\mpu6050.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\mpu6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\mpu6050.o: ..\USER\adcmotor.h
 ..\obj\mpu6050.o: ..\USER\usart4.h
 ..\obj\mpu6050.o: ..\MiniBalance_HARDWARE\LED\led.h
@@ -65,6 +65,6 @@
 ..\obj\mpu6050.o: ..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h
 ..\obj\mpu6050.o: ..\MiniBalance\DMP\dmpKey.h
 ..\obj\mpu6050.o: ..\MiniBalance\DMP\dmpmap.h
-..\obj\mpu6050.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-..\obj\mpu6050.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-..\obj\mpu6050.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+..\obj\mpu6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\mpu6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\mpu6050.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

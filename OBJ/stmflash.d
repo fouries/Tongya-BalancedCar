@@ -3,7 +3,7 @@
 ..\obj\stmflash.o: ..\SYSTEM\sys\sys.h
 ..\obj\stmflash.o: ..\USER\stm32f4xx.h
 ..\obj\stmflash.o: ..\CORE\core_cm4.h
-..\obj\stmflash.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\stmflash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\stmflash.o: ..\CORE\core_cmInstr.h
 ..\obj\stmflash.o: ..\CORE\core_cmFunc.h
 ..\obj\stmflash.o: ..\CORE\core_cm4_simd.h
@@ -40,7 +40,7 @@
 ..\obj\stmflash.o: ..\SYSTEM\delay\delay.h
 ..\obj\stmflash.o: ..\SYSTEM\sys\sys.h
 ..\obj\stmflash.o: ..\USER\dac.h
-..\obj\stmflash.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\stmflash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\stmflash.o: ..\USER\adcmotor.h
 ..\obj\stmflash.o: ..\USER\usart4.h
 ..\obj\stmflash.o: ..\MiniBalance_HARDWARE\LED\led.h
@@ -65,6 +65,6 @@
 ..\obj\stmflash.o: ..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h
 ..\obj\stmflash.o: ..\MiniBalance\DMP\dmpKey.h
 ..\obj\stmflash.o: ..\MiniBalance\DMP\dmpmap.h
-..\obj\stmflash.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-..\obj\stmflash.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-..\obj\stmflash.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+..\obj\stmflash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\stmflash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\stmflash.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

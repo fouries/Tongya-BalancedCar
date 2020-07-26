@@ -2,7 +2,7 @@
 ..\obj\usart.o: ..\SYSTEM\sys\sys.h
 ..\obj\usart.o: ..\USER\stm32f4xx.h
 ..\obj\usart.o: ..\CORE\core_cm4.h
-..\obj\usart.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\usart.o: ..\CORE\core_cmInstr.h
 ..\obj\usart.o: ..\CORE\core_cmFunc.h
 ..\obj\usart.o: ..\CORE\core_cm4_simd.h
@@ -39,7 +39,7 @@
 ..\obj\usart.o: ..\SYSTEM\delay\delay.h
 ..\obj\usart.o: ..\SYSTEM\sys\sys.h
 ..\obj\usart.o: ..\USER\dac.h
-..\obj\usart.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\usart.o: ..\USER\adcmotor.h
 ..\obj\usart.o: ..\USER\usart4.h
 ..\obj\usart.o: ..\MiniBalance_HARDWARE\LED\led.h
@@ -64,6 +64,6 @@
 ..\obj\usart.o: ..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h
 ..\obj\usart.o: ..\MiniBalance\DMP\dmpKey.h
 ..\obj\usart.o: ..\MiniBalance\DMP\dmpmap.h
-..\obj\usart.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-..\obj\usart.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-..\obj\usart.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\usart.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

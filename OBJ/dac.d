@@ -1,11 +1,11 @@
 ..\obj\dac.o: DAC.c
 ..\obj\dac.o: dac.h
-..\obj\dac.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\dac.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\dac.o: stm32f4xx_conf.h
 ..\obj\dac.o: ..\FWLIB\inc\stm32f4xx_adc.h
 ..\obj\dac.o: ..\USER\stm32f4xx.h
 ..\obj\dac.o: ..\CORE\core_cm4.h
-..\obj\dac.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\dac.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\dac.o: ..\CORE\core_cmInstr.h
 ..\obj\dac.o: ..\CORE\core_cmFunc.h
 ..\obj\dac.o: ..\CORE\core_cm4_simd.h
@@ -65,6 +65,6 @@
 ..\obj\dac.o: ..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h
 ..\obj\dac.o: ..\MiniBalance\DMP\dmpKey.h
 ..\obj\dac.o: ..\MiniBalance\DMP\dmpmap.h
-..\obj\dac.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-..\obj\dac.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-..\obj\dac.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+..\obj\dac.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\dac.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\dac.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

@@ -3,7 +3,7 @@
 ..\obj\spi.o: ..\SYSTEM\sys\sys.h
 ..\obj\spi.o: ..\USER\stm32f4xx.h
 ..\obj\spi.o: ..\CORE\core_cm4.h
-..\obj\spi.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\spi.o: ..\CORE\core_cmInstr.h
 ..\obj\spi.o: ..\CORE\core_cmFunc.h
 ..\obj\spi.o: ..\CORE\core_cm4_simd.h
@@ -40,7 +40,7 @@
 ..\obj\spi.o: ..\SYSTEM\delay\delay.h
 ..\obj\spi.o: ..\SYSTEM\sys\sys.h
 ..\obj\spi.o: ..\USER\dac.h
-..\obj\spi.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\spi.o: ..\USER\adcmotor.h
 ..\obj\spi.o: ..\USER\usart4.h
 ..\obj\spi.o: ..\MiniBalance_HARDWARE\LED\led.h
@@ -65,6 +65,6 @@
 ..\obj\spi.o: ..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h
 ..\obj\spi.o: ..\MiniBalance\DMP\dmpKey.h
 ..\obj\spi.o: ..\MiniBalance\DMP\dmpmap.h
-..\obj\spi.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-..\obj\spi.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-..\obj\spi.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+..\obj\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\spi.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h

@@ -4,7 +4,7 @@
 ..\obj\pstwo.o: ..\SYSTEM\sys\sys.h
 ..\obj\pstwo.o: ..\USER\stm32f4xx.h
 ..\obj\pstwo.o: ..\CORE\core_cm4.h
-..\obj\pstwo.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+..\obj\pstwo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
 ..\obj\pstwo.o: ..\CORE\core_cmInstr.h
 ..\obj\pstwo.o: ..\CORE\core_cmFunc.h
 ..\obj\pstwo.o: ..\CORE\core_cm4_simd.h
@@ -39,7 +39,7 @@
 ..\obj\pstwo.o: ..\FWLIB\inc\stm32f4xx_fsmc.h
 ..\obj\pstwo.o: ..\USER\pstwo.h
 ..\obj\pstwo.o: ..\USER\dac.h
-..\obj\pstwo.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+..\obj\pstwo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
 ..\obj\pstwo.o: ..\SYSTEM\sys\sys.h
 ..\obj\pstwo.o: ..\USER\adcmotor.h
 ..\obj\pstwo.o: ..\USER\usart4.h
@@ -66,6 +66,6 @@
 ..\obj\pstwo.o: ..\MiniBalance\DMP\inv_mpu_dmp_motion_driver.h
 ..\obj\pstwo.o: ..\MiniBalance\DMP\dmpKey.h
 ..\obj\pstwo.o: ..\MiniBalance\DMP\dmpmap.h
-..\obj\pstwo.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
-..\obj\pstwo.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-..\obj\pstwo.o: C:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+..\obj\pstwo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+..\obj\pstwo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+..\obj\pstwo.o: D:\Keil_v5\ARM\ARMCC\Bin\..\include\math.h
