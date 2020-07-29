@@ -1,21 +1,21 @@
-#include "stm32f4xx.h"    // Test vscode
+#include "stm32f4xx.h"
 #include "sys.h"  
-u8 Way_Angle=1;                             //ï¿½ï¿½È¡ï¿½Ç¶Èµï¿½ï¿½ã·¨ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½  2ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë²ï¿½ 
-u8 Flag_Qian,Flag_Hou,Flag_Left,Flag_Right,Flag_sudu=2; //ï¿½ï¿½ï¿½ï¿½Ò£ï¿½ï¿½ï¿½ï¿½ØµÄ±ï¿½ï¿½ï¿½
-u8 Flag_Stop=0,Flag_Show=0,Flag_Hover=0;    //Í£Ö¹ï¿½ï¿½Ö¾Î»ï¿½ï¿½ ï¿½ï¿½Ê¾ï¿½ï¿½Ö¾Î» Ä¬ï¿½ï¿½Í£Ö¹ ï¿½ï¿½Ê¾ï¿½ï¿½
-int Encoder_Left,Encoder_Right;             //ï¿½ï¿½ï¿½Ò±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-int Moto1,Moto2;                            //ï¿½ï¿½ï¿½PWMï¿½ï¿½ï¿½ï¿½ Ó¦ï¿½ï¿½Motorï¿½ï¿½ ï¿½ï¿½Motoï¿½Â¾ï¿½	
-int Temperature;                            //ï¿½ï¿½Ê¾ï¿½Â¶ï¿½
-int Voltage,adc6;                                //ï¿½ï¿½Øµï¿½Ñ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ØµÄ±ï¿½ï¿½ï¿½
-float Angle_Balance,Gyro_Balance,Gyro_Turn; //Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ Æ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ×ªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-float Show_Data_Mb;                         //È«ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Òªï¿½é¿´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-u32 Distance;                               //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-u8 delay_50,delay_flag,Bi_zhang=0,PID_Send,Flash_Send; //ï¿½ï¿½Ê±ï¿½Íµï¿½ï¿½ÎµÈ±ï¿½ï¿½ï¿½
-float Acceleration_Z;                       //Zï¿½ï¿½ï¿½ï¿½Ù¶È¼ï¿½  
-float Balance_Kp=10,Balance_Kd=0.04,Balance_Ki=0.0,Velocity_Kp=0.35,Velocity_Ki=0.55;//PIDï¿½ï¿½ï¿½ï¿½
-u16 PID_Parameter[10],Flash_Parameter[10];  //Flashï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
-float Zhongzhi=-0.4;                          //ï¿½ï¿½Ðµï¿½ï¿½Öµ
-u32 Remoter_Ch1=1500,Remoter_Ch2=1500;      //ï¿½ï¿½Ä£Ò£ï¿½Ø½ï¿½ï¿½Õ±ï¿½ï¿½ï¿½
+u8 Way_Angle=1;                             //»ñÈ¡½Ç¶ÈµÄËã·¨£¬1£ºËÄÔªÊý  2£º¿¨¶ûÂü  3£º»¥²¹ÂË²¨ 
+u8 Flag_Qian,Flag_Hou,Flag_Left,Flag_Right,Flag_sudu=2; //À¶ÑÀÒ£¿ØÏà¹ØµÄ±äÁ¿
+u8 Flag_Stop=0,Flag_Show=0,Flag_Hover=0;    //Í£Ö¹±êÖ¾Î»ºÍ ÏÔÊ¾±êÖ¾Î» Ä¬ÈÏÍ£Ö¹ ÏÔÊ¾´ò¿ª
+int Encoder_Left,Encoder_Right;             //×óÓÒ±àÂëÆ÷µÄÂö³å¼ÆÊý
+int Moto1,Moto2;                            //µç»úPWM±äÁ¿ Ó¦ÊÇMotorµÄ ÏòMotoÖÂ¾´	
+int Temperature;                            //ÏÔÊ¾ÎÂ¶È
+int Voltage,adc6;                                //µç³ØµçÑ¹²ÉÑùÏà¹ØµÄ±äÁ¿
+float Angle_Balance,Gyro_Balance,Gyro_Turn; //Æ½ºâÇã½Ç Æ½ºâÍÓÂÝÒÇ ×ªÏòÍÓÂÝÒÇ
+float Show_Data_Mb;                         //È«¾ÖÏÔÊ¾±äÁ¿£¬ÓÃÓÚÏÔÊ¾ÐèÒª²é¿´µÄÊý¾Ý
+u32 Distance;                               //³¬Éù²¨²â¾à
+u8 delay_50,delay_flag,Bi_zhang=0,PID_Send,Flash_Send; //ÑÓÊ±ºÍµ÷²ÎµÈ±äÁ¿
+float Acceleration_Z;                       //ZÖá¼ÓËÙ¶È¼Æ  
+float Balance_Kp=10,Balance_Kd=0.04,Balance_Ki=0.0,Velocity_Kp=0.35,Velocity_Ki=0.55;//PID²ÎÊý
+u16 PID_Parameter[10],Flash_Parameter[10];  //FlashÏà¹ØÊý×é
+float Zhongzhi=-0.4;                          //»úÐµÖÐÖµ
+u32 Remoter_Ch1=1500,Remoter_Ch2=1500;      //º½Ä£Ò£¿Ø½ÓÊÕ±äÁ¿
 int PS2_LX,PS2_LY,PS2_RX,PS2_RY,PS2_KEY;     //
 int dac_value=1;
 long steer_val=0;
@@ -23,29 +23,29 @@ void gwsdelay_ms(int ms);
 int main(void)
 {
 //	long tmpval=30000;
-	delay_init(168);                //=====ï¿½ï¿½Æµ168M
-	uart_init(128000);              //=====ï¿½ï¿½Ê±ï¿½ï¿½Ê¼ï¿½ï¿½
-	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//=====ï¿½ï¿½ï¿½ï¿½ÏµÍ³ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½È¼ï¿½ï¿½ï¿½ï¿½ï¿½2
-	LED_Init();                     //=====LEDï¿½ï¿½Ê¼ï¿½ï¿½
-	KEY_Init();                     //=====ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
-  OLED_Init();                    //=====OLEDï¿½ï¿½Ê¼ï¿½ï¿½
-//	TIM3_Cap_Init(0XFFFF,84-1);	    //=====ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
-	//TIM8_Cap_Init(0XFFFF,168-1);	  //=====ï¿½ï¿½Ä£Ò£ï¿½Ø½ï¿½ï¿½Õ³ï¿½Ê¼
-	Encoder_Init_TIM2();            //=====ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
-	Encoder_Init_TIM4();            //=====ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
-	uart2_init(115200);               //=====ï¿½ï¿½ï¿½ï¿½2ï¿½ï¿½Ê¼ï¿½ï¿½
-	delay_ms(500);                  //=====ï¿½ï¿½Ê±ï¿½È´ï¿½ÏµÍ³ï¿½È¶ï¿½
-	IIC_Init();                     //=====IICï¿½ï¿½Ê¼ï¿½ï¿½
-  MPU6050_initialize();           //=====MPU6050ï¿½ï¿½Ê¼ï¿½ï¿½	
-  DMP_Init();                     //=====ï¿½ï¿½Ê¼ï¿½ï¿½DMP 
-	Adc_Init();                     //=====Ä£ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
-	//NRF24L01_Init();    					//=====ï¿½ï¿½Ê¼ï¿½ï¿½NRF24L01  
-  //while(NRF24L01_Check());      //=====NRF24L01Ä£ï¿½ï¿½ï¿½Ô¼ì£¬ï¿½ï¿½ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½NRF24L01Ä£ï¿½é£¬ï¿½ï¿½ï¿½ï¿½Å¼ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
-	CAN1_Mode_Init(1,7,6,3,CAN_Mode_Normal);//=====CANï¿½ï¿½Ê¼ï¿½ï¿½  
-	//MiniBalance_PWM_Init(8400,1);   //=====PWMï¿½ï¿½Ê¼ï¿½ï¿½
-	MiniBalance_EXTI_Init();        //=====ï¿½â²¿ï¿½Ð¶Ï³ï¿½Ê¼ï¿½ï¿½
-	PS2_Init();									    //=====ps2ï¿½ï¿½ï¿½ï¿½ï¿½Ë¿Ú³ï¿½Ê¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½20200525
-	PS2_SetInit();		 					    //=====ps2ï¿½ï¿½ï¿½Ã³ï¿½Ê¼ï¿½ï¿½,ï¿½ï¿½ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½Ìµï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½
+	delay_init(168);                //=====Ö÷Æµ168M
+	uart_init(128000);              //=====ÑÓÊ±³õÊ¼»¯
+	NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);//=====ÉèÖÃÏµÍ³ÖÐ¶ÏÓÅÏÈ¼¶·Ö×é2
+	LED_Init();                     //=====LED³õÊ¼»¯
+	KEY_Init();                     //=====°´¼ü³õÊ¼»¯
+  OLED_Init();                    //=====OLED³õÊ¼»¯
+//	TIM3_Cap_Init(0XFFFF,84-1);	    //=====³¬Éù²¨³õÊ¼»¯
+	//TIM8_Cap_Init(0XFFFF,168-1);	  //=====º½Ä£Ò£¿Ø½ÓÊÕ³õÊ¼
+	Encoder_Init_TIM2();            //=====±àÂëÆ÷³õÊ¼»¯
+	Encoder_Init_TIM4();            //=====±àÂëÆ÷³õÊ¼»¯
+	uart2_init(115200);               //=====´®¿Ú2³õÊ¼»¯
+	delay_ms(500);                  //=====ÑÓÊ±µÈ´ýÏµÍ³ÎÈ¶¨
+	IIC_Init();                     //=====IIC³õÊ¼»¯
+  MPU6050_initialize();           //=====MPU6050³õÊ¼»¯	
+  DMP_Init();                     //=====³õÊ¼»¯DMP 
+	Adc_Init();                     //=====Ä£ÄâÁ¿²É¼¯³õÊ¼»¯
+	//NRF24L01_Init();    					//=====³õÊ¼»¯NRF24L01  
+  //while(NRF24L01_Check());      //=====NRF24L01Ä£¿é×Ô¼ì£¬¿ªÆôÖ®ºó±ØÐë½ÓÈëNRF24L01Ä£¿é£¬³ÌÐò²Å¼ÌÐøÖ´ÐÐ
+	CAN1_Mode_Init(1,7,6,3,CAN_Mode_Normal);//=====CAN³õÊ¼»¯  
+	//MiniBalance_PWM_Init(8400,1); //=====PWM³õÊ¼»¯
+	MiniBalance_EXTI_Init();        //=====Íâ²¿ÖÐ¶Ï³õÊ¼»¯
+	PS2_Init();									    //=====ps2Çý¶¯¶Ë¿Ú³õÊ¼»¯ ¹ÅÎÄÉú20200525
+	PS2_SetInit();		 					    //=====ps2ÅäÖÃ³õÊ¼»¯,ÅäÖÃ¡°ºìÂÌµÆÄ£Ê½¡±£¬²¢Ñ¡ÔñÊÇ·ñ¿ÉÒÔÐÞ¸Ä
 	DAC_Config();										//GWS 20200525
 	Adcmotor_Init(); 								//gws 20200526
 	uart4_init(57600);							//gws 20200526
@@ -54,25 +54,25 @@ int main(void)
 	DAC_Cmd(DAC_Channel_1,DISABLE);
   while(1){
 		PS2_KEY=PS2_DataKey();
-			if(Flash_Send==1)        //Ð´ï¿½ï¿½PIDï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Flash,ï¿½ï¿½appï¿½ï¿½ï¿½Æ¸ï¿½Ö¸ï¿½ï¿½
+			if(Flash_Send==1)        //Ð´ÈëPID²ÎÊýµ½Flash,ÓÉapp¿ØÖÆ¸ÃÖ¸Áî
 				{
 					Flash_Write();	
 					Flash_Send=0;	
 				}	
-			if(Flag_Show==0)        	  //Ê¹ï¿½ï¿½MiniBalance APPï¿½ï¿½OLEDï¿½ï¿½Ê¾ï¿½ï¿½
+			if(Flag_Show==0)        	  //Ê¹ÓÃMiniBalance APPºÍOLEDÏÔÊ¾ÆÁ
 				{
 						//APP_Show();	
 					adc6=Get_motor_adc(6);
 					printf("%d:%d:%d:%d %d\r\n",(int)Angle_Balance,adc6,Encoder_Left,Encoder_Right,PS2_KEY);
-						oled_show();          //===ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
+						oled_show();          //===ÏÔÊ¾ÆÁ´ò¿ª
 				}
-				else                      //Ê¹ï¿½ï¿½MiniBalanceï¿½ï¿½Î»ï¿½ï¿½ ï¿½ï¿½Î»ï¿½ï¿½Ê¹ï¿½Ãµï¿½Ê±ï¿½ï¿½ï¿½ï¿½Òªï¿½Ï¸ï¿½ï¿½Ê±ï¿½ò£¬¹Ê´ï¿½Ê±ï¿½Ø±ï¿½appï¿½ï¿½Ø²ï¿½ï¿½Öºï¿½OLEDï¿½ï¿½Ê¾ï¿½ï¿½
+				else                      //Ê¹ÓÃMiniBalanceÉÏÎ»»ú ÉÏÎ»»úÊ¹ÓÃµÄÊ±ºòÐèÒªÑÏ¸ñµÄÊ±Ðò£¬¹Ê´ËÊ±¹Ø±Õapp¼à¿Ø²¿·ÖºÍOLEDÏÔÊ¾ÆÁ
 				{
-						DataScope();          //ï¿½ï¿½ï¿½ï¿½MiniBalanceï¿½ï¿½Î»ï¿½ï¿½
+						DataScope();          //¿ªÆôMiniBalanceÉÏÎ»»ú
 				}	
 				delay_flag=1;	
 				delay_50=0;
-				while(delay_flag);	     //Í¨ï¿½ï¿½MPU6050ï¿½ï¿½INTï¿½Ð¶ï¿½Êµï¿½Öµï¿½50msï¿½ï¿½×¼ï¿½ï¿½Ê±	
+				while(delay_flag);	     //Í¨¹ýMPU6050µÄINTÖÐ¶ÏÊµÏÖµÄ50ms¾«×¼ÑÓÊ±	
 			//	tmpval=tmpval*(-1);
 				set_angle(steer_val);
 				gwsdelay_ms(20);
